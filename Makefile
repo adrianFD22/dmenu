@@ -30,7 +30,7 @@ stest: stest.o
 
 clean:
 	rm -f dmenu stest $(OBJ) dmenu-$(VERSION).tar.gz
-	[ -f "config.h" ] && rm config.h
+	if [ -f "config.h" ]; then rm config.h; fi
 
 dist: clean
 	mkdir -p dmenu-$(VERSION)
