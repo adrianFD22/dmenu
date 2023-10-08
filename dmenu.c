@@ -505,10 +505,10 @@ keypress(XKeyEvent *ev)
 			goto draw;
 		case XK_g: ksym = XK_Home;  break;
 		case XK_G: ksym = XK_End;   break;
-		case XK_h: ksym = XK_Up;    break;
-		case XK_j: ksym = XK_Next;  break;
-		case XK_k: ksym = XK_Prior; break;
-		case XK_l: ksym = XK_Down;  break;
+		case XK_h: ksym = XK_Next;    break;
+		case XK_j: ksym = XK_Down;  break;
+		case XK_k: ksym = XK_Up; break;
+		case XK_l: ksym = XK_Prior;  break;
 		default:
 			return;
 		}
@@ -878,7 +878,7 @@ main(int argc, char *argv[])
 
 	XrmInitialize();
 	load_xresources();
-	
+
 	for (i = 1; i < argc; i++)
 		/* these options take no arguments */
 		if (!strcmp(argv[i], "-v")) {      /* prints version information */
